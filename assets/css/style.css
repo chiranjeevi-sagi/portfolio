@@ -394,6 +394,10 @@ html.menu-open { overflow: hidden; }
   background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
 }
 .stat-label { font-size: .88rem; line-height: 1.45; color: var(--muted); }
+.stat-wide { grid-column: 1 / -1; }
+.stat-kind { display: flex; align-items: center; gap: .45rem; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.stat-kind .icon { width: 15px; height: 15px; }
+.stat-text { font-size: clamp(1.45rem, 2.4vw, 1.8rem); line-height: 1.15; letter-spacing: -.03em; }
 
 .focus-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; list-style: none; margin: 0; padding: 0; }
 .focus { padding: 1.5rem; }
@@ -464,6 +468,13 @@ html.menu-open { overflow: hidden; }
 .project-body { display: flex; flex: 1; flex-direction: column; gap: .8rem; padding: 1.4rem 1.5rem 1.5rem; }
 .project-kind { margin: 0; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .07em; text-transform: uppercase; color: var(--accent); }
 .project h3 { margin: 0; font-size: 1.3rem; }
+.project-award {
+  align-self: flex-start; display: inline-flex; align-items: flex-start; gap: .45rem;
+  padding: .4rem .75rem; border-radius: 10px; background: var(--accent-soft);
+  font-size: .8rem; font-weight: 500; line-height: 1.4; color: var(--accent);
+}
+.project-award .icon { width: 15px; height: 15px; margin-top: .1em; }
+.nowrap { white-space: nowrap; }
 .project-body > p:not(.project-kind) { margin: 0; font-size: .95rem; color: var(--text-2); }
 .project .tags { margin-top: auto; padding-top: .4rem; }
 .project-points { grid-template-columns: 1fr 1fr; column-gap: 1.5rem; margin: .1rem 0 .4rem; }
@@ -700,6 +711,7 @@ html.menu-open { overflow: hidden; }
   .project-points { grid-template-columns: 1fr; }
   .cred-cert { grid-template-columns: 1fr; gap: 1.25rem; }
   .cert-badge { width: 88px; height: 88px; }
+  .stats { grid-template-columns: 1fr; }
   .stat { padding: 1.15rem 1rem; }
   .hero { padding-block: calc(var(--header-h) + 2rem) 4.5rem; }
   .hero-facts { flex-direction: column; gap: .55rem; }
